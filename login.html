@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixelated Me</title>
     <script src="../js/sign_in_up.js"></script>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="logo">
             <!-- Idle Animated Sprite Logo -->
-            <div id = "logo-img">
+            <div id = "logo-nav">
                 <img src="assets\img\logo.png" alt="Logo">
             </div>
             <h4>Pixelated Me</h4>
@@ -20,12 +22,14 @@
 
         <!-- Pop-up Demo-->
         <div id="Demo">
-            <a href=#>Demo</a></li>
+            <a href="#" target="_blank">Demo</a>
         </div>
     </nav>
-    <h1>WELCOME TO <br>
-        PIXELATED ME: <br>
-        Code Labyrinth</h1>
+
+    <h1><span id="Welcome">WELCOME TO</span> <br>
+        <span id="Pixelated">PIXELATED ME:</span><br>
+        <span id="Code">Code Labyrinth</span>
+    </h1>
 
     <!-- Idle Animated Sprite Logo -->
     <div class="logo">
@@ -34,44 +38,49 @@
         </div>
     </div>
 
+
+    <!-- Sign-In/Up Form -->
+    <div class = "sign-in-sign-up">
     <!-- Sign-In Form -->
-    <div class= "signin-signup" id="signin-form">
-        <h2>Sign In To Play</h2>
-        <form action="../js/sign_in_up.js" method="">
-            <label for="signin-email">Email:</label><br>
-            <input type="email" id="signin-email" name="email" placeholder="Email" required><br>
+        <div id="sign-in-form">
+            <h2>Sign In To Play</h2>
+            <form id="sign-in" action="../js/sign_in_up.js" method="">
+                <div class = "sign-in-up-input">
+                    <label for="signin-email">Email:</label><br>
+                    <input type="email" id="sign-in-email" name="email" placeholder="Email" required><br>
+    
+                    <label for="signin-password">Password:</label><br>
+                    <input type="password" id="sign-in-password" name="password" placeholder="Password" required><br>
+                </div>
+                <input id ="sign-in-button" type="submit" value="Sign In"> <br>
 
-            <label for="signin-password">Password:</label><br>
-            <input type="password" id="signin-password" name="password" placeholder="Password" required><br>
+                <div id = "sign-in-up-link">
+                    <a href="#" onclick="toggleForm('sign-up-form')">or create an account</a><br>
+                </div>
 
-            <input type="submit" value="Sign In"> <br>
+            </form>
+        </div>
 
-            <div class = "sign-up">
-                <a href="#" onclick="toggleForm('signup-form')">or create an account</a><br>
-            </div>
+        <!-- Sign-Up Form -->
+        <div id="sign-up-form" style="display: none;">
+            <h2>Create an Account</h2>
+            <form action="../js/sign_in_up.js" method="">
+            <div class = "sign-in-up-input">
+                <label for="sign-up-username">Username:</label><br>
+                <input type="text" id="sign-up-username" name="username" placeholder="Username" required><br>
+                    <label for="sign-up-email">Email:</label><br>
+                    <input type="email" id="sign-up-email" name="email" placeholder="Email" required><br>
 
-        </form>
-    </div>
+                    <label for="sign-up-password">Password:</label><br>
+                    <input type="password" id="sign-up-password" name="password" placeholder="Password" readonly><br>
+                </div>
+                <input id ="sign-up-button" type="submit" value="Sign Up"> <br>
 
-    <!-- Sign-Up Form -->
-    <div class= "signin-signup" id="signup-form" style="display: none;">
-        <h2>Create an Account</h2>
-        <form action="../js/sign_in_up.js" method="">
-            <label for="signup-username">Username:</label><br>
-            <input type="text" id="signup-username" name="username" placeholder="Username" required><br>
-
-            <label for="signup-email">Email:</label><br>
-            <input type="email" id="signup-email" name="email" placeholder="Email" required><br>
-
-            <label for="signup-password">Password:</label><br>
-            <input type="password" id="signup-password" name="password" placeholder="Password" readonly><br>
-
-            <input type="submit" value="Sign Up"> <br>
-
-            <div class = "log-in">
-                <a href="#" onclick="toggleForm('signin-form')">or login</a><br>
-            </div>
-        </form>
+                <div class = "sign-in-up-link">
+                    <a href="#" onclick="toggleForm('sign-in-form')">or login</a><br>
+                </div>
+            </form>
+        </div>
     </div>
 
     <footer>

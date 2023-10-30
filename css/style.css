@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Pixel Operator';
+    src: url('..\assets\fonts\pixel_operator\PixelOperator.ttf') format('ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: url('..\assets\fonts\Pixelify_Sans\PixelifySans-VariableFont_wght.ttf') format('ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('..\assets\assets\fonts\Press_Start_2P\PressStart2P-Regular.ttf') format('ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Pixel Operator';
+    margin: 0;
+    padding: 0;
+    background-color: #121111;
+}
+
+nav {
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+
+}
+
+nav h4 {
+    display: block;
+}
+
+nav h5 {
+    display: block;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-nav img {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+#Demo a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* h1 */
+h1 {
+    font-family: 'Pixel Operator';
+    margin-top: 10px;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+h1 #Welcome{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+h1 #Pixelated{
+    font-size: 80px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+h1 #Code {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#logo-img {
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.sign-in-sign-up {
+    font-family: Pixelify Sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: #E1E460;
+
+}
+
+.sign-in-up-input input{
+    margin-bottom: 5px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #BDBDBD;
+    
+}
+
+.sign-in-up-input label{
+    font-family: Pixel Operator;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+    color: #D5D6A5;
+    
+}
+
+
+#sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
