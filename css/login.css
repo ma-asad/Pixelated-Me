@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Pixel Operator';
+    src: url('./assets/fonts/pixel_operator/PixelOperator.ttf') format('ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: url('./assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('ttf'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Windows Command Prompt';
+    src: url('./assets/fonts/windows_command_prompt.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    /* font-family: 'Press Start 2P'; */
+    margin: 0;
+    padding: 0;
+    background-color: #121111;
+}
+
+
+/* Styles for the header section */
+
+/* NAV */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+    font-family: 'Pixel Operator';
+    background-color: #1A1A1A;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+
+#nav-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-title {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#first {
+    font-size: 25px; 
+}
+
+#second {
+    font-size: 15px; 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.link-item a {
+    font-size: 25px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* body-title */
+.body-title {
+    font-family: 'Press Start 2P';
+    color: white;
+    text-align: center;
+}
+
+.body-title span {
+    display: block;
+}
+
+span#Welcome {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 20px 0 0px;
+}
+
+span#Pixelated {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0 0px 0;
+}
+
+span#Code {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 15px;
+}
+
+
+#char-img {
+    margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+}
+
+
+/* FORM  */
+
+
+.sign-in-sign-up {
+    font-family: Pixelify Sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: #E1E460;
+}
+
+
+.sign-in-sign-up h2{
+    text-align: center;
+}
+
+.sign-in-up-input label {
+    font-family: Pixel Operator;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+    color: #D5D6A5; 
+}
+
+.sign-in-up-input input{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 15rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    /* background-color: #BDBDBD; */
+    
+
+}
+
+.sign-in-up-button input{
+    margin: auto; /* center the button horizontally */
+    padding: 5px;
+    display: flex;
+    border: none;
+    outline: none;
+    background-color: #3A3A3A;
+    color: white;
+    font-family: Pixelify Sans;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.sign-in-up-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sign-in-up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(132, 131, 131, 0.142);
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    color: white;
+    height: 50%;
+    font-family: 'Pixel Operator';
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content #Quote {
+    font-size: 20px;
+    margin: 10px 0 10px;
+}
+
+.social-icons a i{
+    color: white;
+    font-size: 20px;
+    margin: 4px;
+}
