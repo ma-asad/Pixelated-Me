@@ -1,0 +1,73 @@
+.navbar {
+    margin-bottom: 0; 
+}
+
+/* Center and style character image */
+#char-img img{
+    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MENU */
+.menu-section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+/* Center and style menu */
+.menu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #C6C0A1;
+    font-weight: 300;
+}
+  
+.menu li {
+    list-style: none;
+}
+
+/* POINTER */
+
+/* Pointer image */
+.pointer-img {
+    width: 46px;
+    height: 40px;
+    background-image: url('../assets/img/sprite_0.png');
+}
+
+/* Style menu pointer */
+.menu-pointer {
+    position:relative;
+    display: block;
+}
+
+/* Style menu pointer on hover */
+.menu-pointer:hover {
+    cursor: pointer;
+    padding: 0 10px;
+
+    background-color: rgba(21, 21, 21, 0.501);
+    color: #dee154;
+}
+
+/* Show menu pointer icon on hover */
+.menu-pointer:hover i { 
+    display: block;
+    position: absolute;
+    left: -2em;
+}
