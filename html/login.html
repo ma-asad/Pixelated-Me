@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixelated Me</title>
-    <script src="../js/sign_in_up.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/demo.css">
+
+
+    <script src="../js/sign_in_up.js"></script>
+
 </head>
 
 
@@ -24,11 +29,28 @@
                 </div>
             </div>
             <ul class="nav-links">
-                <li class= "link-item" id="demo"><a href="#" target="_blank">Demo</a></li>
+                <li class= "link-item"><a href="#demo">Demo</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!--popup demo-->
+    <div class="demo">
+        <div class="popup" id="demo">
+            <div class="popup-inner">
+                <div class="demo-close">
+                    <a href="#" class="x-close" ><i class="bi bi-x"></i></a>
+                    <h3 class="inner-title">DEMO</h3>
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iusto sequi accusantium delectus error laboriosam placeat,
+                    est expedita provident sed non harum facilis molestiae assumenda quibusdam aspernatur soluta vero eveniet beatae.</p>
+                <h3 class="inner-title">Demo Video</h3>
+                <iframe src="https://www.youtube.com/embed/HWQqabCkAjU?loop=1&playlist=HWQqabCkAjU" allow="fullscreen" title="YouTube video" id="video"></iframe>
+            </div>
+        </div>
+    </div>
 
     <div class="body-title">
         <span id="Welcome">WELCOME TO</span><br>
@@ -36,8 +58,7 @@
         <span id="Code">Code Labyrinth</span>
     </div>
 
-    <!-- Idle Animated Sprite Logo -->
-    <!-- TODO: Add Animated Sprite -->
+    <!-- Animated Sprite Face Logo -->
     <div id="char-img">
         <img src="../assets/img/PixMe-Face.gif" alt="Face">
     </div>
