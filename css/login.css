@@ -1,39 +1,52 @@
 @font-face {
     font-family: 'Pixel Operator';
-    src: url('./assets/fonts/pixel_operator/PixelOperator.ttf') format('ttf'); 
+    src: url('../assets/fonts/pixel_operator/PixelOperator.ttf') format('ttf', 'truetype'); 
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pixelify Sans';
-    src: url('./assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('ttf'); 
+    src: url('../assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('ttf', 'truetype'); 
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Press Start 2P';
-    src: url('./assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('ttf'); 
+    src: url('../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('ttf', 'truetype'); 
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Windows Command Prompt';
-    src: url('./assets/fonts/windows_command_prompt.ttf') format('ttf');
+    src: url('../assets/fonts/windows_command_prompt.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
 
+* {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
+}
 
 body {
     display: flex;
     flex-direction: column;
+
     min-height: 100vh;
-    font-family: 'Press Start 2P';
     margin: 0;
     padding: 0;
+
+
+    font-family: 'Press Start 2P';
+
+
+    &::-webkit-scrollbar {
+        display: none;
+        }
+
 }
 
 body {
@@ -48,18 +61,11 @@ body {
         hsl(75, 4%, 18%));
 
     background-size: 1000% 1000%;
-    /* linear-gradient(55deg, #262822, #3f4239, #404639, #31332e, #434829); */
-
-    /* background: linear-gradient(55deg,
-#292a26);
-#21231e,
-#2e302c,
-#373737,
-#31332e, */
     -webkit-animation: BackgroundAnimation 14s ease infinite;
     -moz-animation: BackgroundAnimation 14s ease infinite;
     animation: BackgroundAnimation 14s ease infinite;
 }
+
 
 @-webkit-keyframes BackgroundAnimation {
     0%{background-position:0% 73%}
@@ -76,6 +82,8 @@ body {
     50%{background-position:100% 28%}
     100%{background-position:0% 73%}
 }
+
+
 /* Styles for the header section */
 
 /* NAV */
@@ -183,18 +191,21 @@ span#Welcome {
     font-size: 20px;
     font-weight: 400;
     margin: 20px 0 0px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 span#Pixelated {
     font-size: 30px;
     font-weight: 500;
-    margin: 10px 0 0px 0;
+    margin: 5px 0 0px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 span#Code {
     font-size: 25px;
     font-weight: 400;
     margin: 0 0 15px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 
@@ -332,6 +343,6 @@ p#Quote{
 }
 
 p#copyright{
-    font-size: 2px;
+    font-size: 8px;
 }
 
