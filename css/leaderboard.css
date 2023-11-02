@@ -1,0 +1,96 @@
+
+h1 {
+    font-family: 'Press Start 2P';
+    text-align: center;
+
+    font-size: 30px;
+    letter-spacing: 3px;
+
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* .leaderboard-container {
+    height: 310px;
+    overflow-y: auto;
+    display: block;
+    margin: 0  auto;
+    margin-bottom: 20px;
+} */
+
+.leaderboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.scrollable-table {
+    display: block;
+    max-height: 310px; /* Adjust as needed */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+/* Scrollbar thumb */
+.scrollable-table::-webkit-scrollbar-thumb {
+    background: #98957c; /* Color of the scroll thumb */
+    border-radius: 0px;
+}
+
+/* Scrollbar track (the background) */
+.scrollable-table::-webkit-scrollbar-track {
+    background: #616161; /* Color of the scroll track */
+}
+
+/* Scrollbar itself */
+.scrollable-table::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+
+
+table {
+
+    border-collapse: collapse;
+    width: 700px;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: #353434;
+    color: #fff;
+    
+}
+
+table th, table td {
+    font-weight: 500;
+    padding: 12px;
+    border: 1px solid #5d5a5a;
+}
+
+table td {
+    font-family: 'Pixel Operator';
+    font-size: 25px;
+    font-weight: 550;
+    padding: 12px;
+    border: 1px solid #5d5a5a;
+}
+
+table th {
+    background-color: rgb(218, 217, 212);
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 12px;
+    position: sticky;
+    top: 0;
+}
+
+table tr:hover {
+    background-color: #E1E460;
+    color: #000000;
+}
+
