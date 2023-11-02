@@ -1,0 +1,48 @@
+#game-area {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 40px;
+}
+
+.game-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    margin-bottom: 0px;
+}
+
+.game-controls i {
+    cursor: pointer;
+}
+
+.game-controls a {
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.game-controls a:hover {
+    text-decoration: underline;
+    color: #D5D6A5; 
+}
+
+.control-icons {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.control-icons svg:hover  {
+    cursor: pointer;
+    color: #D5D6A5; 
+}
+
+#game-canvas {
+    background-color: #1a1a17;
+    width: 100vw;
+    height: 70vh;
+}
