@@ -1,104 +1,95 @@
-
 h1 {
-    font-family: 'Press Start 2P';
-    text-align: center;
+  font-family: "Press Start 2P";
+  text-align: center;
 
-    font-size: 30px;
-    letter-spacing: 3px;
+  font-size: 30px;
+  letter-spacing: 3px;
 
-    color: #fff;
-    text-shadow: 2px 2px 4px #000000;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-
 .leaderboard-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .scrollable-table {
-    display: block;
-    height: 314px;
-    overflow-y: auto;
-    overflow-x: hidden;
+  display: block;
+  height: 314px;
+  overflow-y: auto;
+  overflow-x: hidden;
 
-    /* Firefox */
-    scrollbar-color: #98957c transparent;
-    scrollbar-width: auto;
-
+  /* Firefox */
+  scrollbar-color: #98957c transparent;
+  scrollbar-width: auto;
 }
 
 /* Scrollbar thumb */
 .scrollable-table::-webkit-scrollbar-thumb {
-    background: #98957c; /* Color of the scroll thumb */
-    border-radius: 0px;
+  background: #98957c; /* Color of the scroll thumb */
+  border-radius: 0px;
 }
 
 /* Scrollbar track (the background) */
 .scrollable-table::-webkit-scrollbar-track {
-    background: #616161; /* Color of the scroll track */
+  background: #616161; /* Color of the scroll track */
 }
 
 /* Scrollbar itself */
 .scrollable-table::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
+  width: 5px; /* Width of the scrollbar */
 }
 
-
-
 table {
+  border-collapse: collapse;
+  width: 700px;
 
-    border-collapse: collapse;
-    width: 700px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
 
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-
-    background-color: rgba(42, 42, 42, 0.4);
-    color: #d0d0d0;
-    border: 1px solid #505050;
-    
+  background-color: rgba(42, 42, 42, 0.4);
+  color: #d0d0d0;
+  border: 1px solid #505050;
 }
 
 table th {
-    background-color: rgb(218, 217, 212);
-    color: #1f1f1f;
+  background-color: rgb(218, 217, 212);
+  color: #1f1f1f;
 
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 
-    /* padding: 16px 12px; */
-    height: 60px;
-    position: sticky;
-    top: 0;
+  height: 60px;
+  position: sticky;
+  top: 0;
 }
 
 table td {
-    font-family: 'Pixel Operator';
-    font-size: 25px;
-    font-weight: 550;
-    border: 1px solid #6b6b6b;
+  font-family: "Pixel Operator";
+  font-size: 25px;
+  font-weight: 550;
+  border: 1px solid #6b6b6b;
 }
 
 table tr {
-    height: 50px;
+  height: 50px;
 }
 
 .first-row {
-    font-weight: 700;
-    font-size: 26px;
-    color: rgb(200, 200, 50);
+  font-weight: 700;
+  font-size: 26px;
+  color: rgb(200, 200, 50);
 }
 
 table tr:hover {
-    background-color: #E1E460;
-    color: #000000;
+  background-color: #e1e460;
+  color: #000000;
 
-    .first-row {
-        color: rgb(38, 38, 11);
-    }
+  .first-row {
+    color: rgb(38, 38, 11);
+  }
 }
-

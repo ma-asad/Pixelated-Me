@@ -1,65 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixelated Me</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/game.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/game.css" />
+    <link rel="stylesheet" href="../css/popup.css" />
+    <link rel="stylesheet" href="../css/setting.css" />
+    <link rel="stylesheet" href="../css/info.css" />
+    <script src="../javascript/setting.js"></script>
+  </head>
 
-</head>
-
-
-<body>
-
+  <body>
     <header>
-        <!-- NAVIGATION BAR -->
-        <nav class="navbar">
-            <div class = "logo">
-                <img id="nav-logo" src="../assets/img/PixMe.gif" alt="Logo">
-                <div class="nav-title">
-                    <div id="first">Pixelated Me</div>
-                    <div id="second">Code Labyrinth</div>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li class= "link-item"><a href="../html/home.html">HOME</a></li>
-                <li class= "link-item"><a href="../html/about.html">ABOUT</a></li>
-                <li class= "link-item"><a href="../html/login.html">LOGOUT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div id="game-area">
-            <div class="game-controls">
-                <div class="control-icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
-                        <path d="M 4.5838694e-4,4.0809786 A 0.51080622,0.42309358 0 0 0 0.51988579,4.5219242 H 2.2980087 c 0.2974315,0 0.5345145,-0.2017281 0.5733099,-0.4463012 0.1939771,-1.1710945 1.1638623,-2.0244225 2.8924133,-2.0244225 1.4785361,0 2.8320649,0.6123253 2.8320649,2.0851195 0,1.1336051 -0.8060825,1.654885 -2.0798651,2.447516 -1.4505172,0.8729652 -2.5992923,1.8923173 -2.5173909,3.547202 l 0.00647,0.38739 a 0.53882512,0.44630125 0 0 0 0.5388251,0.43916 H 6.2917805 A 0.53882512,0.44630125 0 0 0 6.8306056,10.511287 V 10.32384 c 0,-1.2817767 0.588397,-1.6548846 2.1768532,-2.6528142 C 10.320037,6.8444759 11.688653,5.9268806 11.688653,4.0006444 11.688653,1.3031996 8.9384898,0 5.9275347,0 3.196769,0 0.20521189,1.0532709 4.5838694e-4,4.0809786 Z M 3.3562612,14.369115 c 0,0.951514 0.9160027,1.654885 2.1768535,1.654885 1.312578,0 2.2156489,-0.703371 2.2156489,-1.654885 0,-0.985433 -0.9052262,-1.678093 -2.2178042,-1.678093 -1.2586955,0 -2.1746982,0.69266 -2.1746982,1.678093 z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                    </svg>   
-                </div>
-                <a href="leaderboard.html" target="_blank">Leaderboard</a>
-            </div>
-            <canvas id="game-canvas" width="800" height="600"></canvas>
+      <!-- NAVIGATION BAR -->
+      <nav class="navbar">
+        <div class="logo">
+          <img id="nav-logo" src="../assets/img/sprite/PixMe.gif" alt="Logo" />
+          <div class="nav-title">
+            <div id="first">Pixelated Me</div>
+            <div id="second">Code Labyrinth</div>
+          </div>
         </div>
+        <ul class="nav-links">
+          <li class="link-item"><a href="../html/home.html">HOME</a></li>
+          <li class="link-item"><a href="../html/about.html">ABOUT</a></li>
+          <li class="link-item"><a href="../html/login.html">LOGOUT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- popup Info -->
+    <div class="info">
+      <div class="popup" id="info">
+        <div class="popup-inner">
+          <div class="info-close">
+            <a href="#" class="x-close" role="button" aria-label="Close">
+              <svg
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="close"
+              >
+                <path
+                  d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <h3 class="inner-title">GAME INSTRUCTION:</h3>
+          </div>
+          <div class="game-info">
+            <span class="inter">
+              <div class="inter-title">MOVE</div>
+              <div>W/<i class="bi bi-arrow-up"></i>:UP</div>
+              <div>A/<i class="bi bi-arrow-right"></i>:LEFT</div>
+              <div>S/<i class="bi bi-arrow-up"></i>:DOWN</div>
+              <div>D/<i class="bi bi-arrow-down"></i>:RIGHT</div>
+            </span>
+            <span class="inter">
+              <div class="inter-title">INTERACT</div>
+
+              <div>E: Pick up items</div>
+              <div>C: Consume consumables</div>
+              <div>Q: Defend</div>
+              <div>F: Attack</div>
+              <div>Space Bar: Pause</div>
+            </span>
+
+            <div class="hint">
+              Complete 3 levels to earn stars. Achieve objectives, collect bug
+              tokens, and aim for the best time.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--popup Setting-->
+    <div class="setting">
+      <div class="popup" id="setting">
+        <div class="popup-inner">
+          <div class="setting-close">
+            <a href="#" class="x-close" role="button" aria-label="Close">
+              <svg
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="close"
+              >
+                <path
+                  d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <h3 class="inner-title">SETTING</h3>
+          </div>
+
+          <!--Audio Slider-->
+          <div class="slider">
+            <div>
+              <label for="vol">AUDIO</label>
+              <input
+                id="vol"
+                class="vol"
+                type="range"
+                value="0"
+                min="0"
+                max="100"
+                onchange="volValue(this.value)"
+              />
+            </div>
+            <span id="volValue">0</span>
+          </div>
+        </div>
+        <div class="key-text">
+          <div>KEYBOARD</div>
+        </div>
+        <div class="keys">
+          <i class="bi bi-keyboard"></i>
+          <div class="keys"><i class="bi bi-keyboard"></i></div>
+          <div class="setting-button">
+            <div class="reset">Reset</div>
+            <div class="resume">Resume</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="game-area">
+      <div>
+        <div class="game-controls">
+          <div class="control-icons">
+            <a href="#info" role="button" aria-label="Open info popup">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-question"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4.081a.51.423 0 0 0 .52.44h1.778c.297 0 .535-.2.573-.445.194-1.171 1.164-2.025 2.893-2.025 1.478 0 2.832.613 2.832 2.085 0 1.134-.806 1.655-2.08 2.448-1.45.873-2.6 1.892-2.517 3.547l.006.387a.539.446 0 0 0 .539.44h1.748a.539.446 0 0 0 .539-.447v-.187c0-1.282.588-1.655 2.176-2.653 1.313-.827 2.682-1.744 2.682-3.67C11.689 1.303 8.939 0 5.928 0 3.197 0 .205 1.053 0 4.081Zm3.356 10.288c0 .952.916 1.655 2.177 1.655 1.313 0 2.216-.703 2.216-1.655 0-.985-.905-1.678-2.218-1.678-1.259 0-2.175.693-2.175 1.678z"
+                />
+              </svg>
+            </a>
+            <a href="#setting" role="button" aria-label="Open settings">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-gear-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <a href="leaderboard.html" target="_blank">Leaderboard</a>
+        </div>
+        <canvas id="game-canvas" width="800" height="600"></canvas>
+      </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-content">
-            <p id ="Quote">Lost in the Pixelated Code Labyrinth</p>
-            <div class="social-icons">
-                <a href="https://github.com/ma-asad" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/maatterkhan/" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
-            </div>
-            <p id ="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
+      <div class="footer-content">
+        <p id="Quote">Lost in the Pixelated Code Labyrinth</p>
+        <div class="social-icons">
+          <a
+            href="https://github.com/ma-asad"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub Profile"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/maatterkhan/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn Profile"
+            ><i class="bi bi-linkedin"></i
+          ></a>
         </div>
+        <p id="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

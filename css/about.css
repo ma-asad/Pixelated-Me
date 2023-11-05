@@ -1,0 +1,47 @@
+#laptop.about-image {
+  width: 128px;
+  height: 128px;
+}
+
+#PixMe-Alone.about-image {
+  width: 96px;
+  height: 96px;
+  margin: 10px 0;
+}
+
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.about-text h2 {
+  font-family: "Press Start 2P";
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: #d5d6a5;
+  margin-bottom: 15px;
+  max-width: 900px;
+  margin: 0 20px;
+}
+
+.about-text p {
+  font-family: "Pixel Operator";
+  font-size: 1.5625rem;
+  word-wrap: break-word;
+  color: rgb(204, 204, 204);
+  max-width: 900px;
+  margin: 0 20px;
+}
+

@@ -1,137 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixelated Me</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/demo.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/demo.css" />
+    <script src="../javascript/sign_in_up.js"></script>
+  </head>
 
-
-    <script src="../js/sign_in_up.js"></script>
-
-</head>
-
-
-
-<body>
-
+  <body>
     <header>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class = "logo">
-                <img id="nav-logo" src="../assets/img/PixMe.gif" alt="Logo">
-                <div class="nav-title">
-                    <div id="first">Pixelated Me</div>
-                    <div id="second">Code Labyrinth</div>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li class= "link-item"><a href="#demo">Demo</a></li>
-            </ul>
-        </nav>
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+        <div class="logo">
+          <img id="nav-logo" src="../assets/img/sprite/PixMe.gif" alt="Logo" />
+          <div class="nav-title">
+            <div id="first">Pixelated Me</div>
+            <div id="second">Code Labyrinth</div>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li class="link-item"><a href="#demo">Demo</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!--popup demo-->
     <div class="demo">
-        <div class="popup" id="demo">
-            <div class="popup-inner">
-                <div class="demo-close">
-                    <a href="#" class="x-close" ><i class="bi bi-x"></i></a>
-                    <h3 class="inner-title">DEMO</h3>
-                </div>
+      <div class="popup" id="demo">
+        <div class="popup-inner">
+          <div class="demo-close">
+            <a href="#" class="x-close" role="button" aria-label="Close">
+              <svg
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="close"
+              >
+                <path
+                  d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <h3 class="inner-title">About Pixelated Me</h3>
+          </div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iusto sequi accusantium delectus error laboriosam placeat,
-                    est expedita provident sed non harum facilis molestiae assumenda quibusdam aspernatur soluta vero eveniet beatae.</p>
-                <h3 class="inner-title">Demo Video</h3>
-                <iframe src="https://www.youtube.com/embed/HWQqabCkAjU?loop=1&playlist=HWQqabCkAjU" allow="fullscreen" title="YouTube video" id="video"></iframe>
-            </div>
+          <p>
+            <b
+              >Welcome to Pixelated Me: Code Labyrinth,<br />a game crafted by
+              Mohammad Asad Atterkhan.</b
+            ><br />This pixelated adventure combines fun and challenges in a
+            unique way. Explore a maze of code and pixel art as you navigate
+            through the labyrinth. Test your problem solving skills while
+            immersing yourself in the captivating pixelated world.<br />
+            Ready to experience it for yourself?<br />Sign Up to play or Click the video below to watch a
+            small demo of the game.
+          </p>
+          <h3 class="inner-title">Demo Video</h3>
+          <iframe
+            src="https://www.youtube.com/embed/HWQqabCkAjU?loop=1&playlist=HWQqabCkAjU"
+            allow="fullscreen"
+            title="YouTube video"
+            id="video"
+          ></iframe>
         </div>
+      </div>
     </div>
 
     <div class="body-title">
-        <span id="Welcome">WELCOME TO</span><br>
-        <span id="Pixelated">PIXELATED ME:</span><br>
-        <span id="Code">Code Labyrinth</span>
+      <span id="Welcome">WELCOME TO</span><br />
+      <span id="Pixelated">PIXELATED ME:</span><br />
+      <span id="Code">Code Labyrinth</span>
     </div>
 
     <!-- Animated Sprite Face Logo -->
     <div id="char-img">
-        <img src="../assets/img/PixMe-Face.gif" alt="Face">
+      <img src="../assets/img/sprite/PixMe-Face.gif" alt="Face" />
     </div>
 
-
-<!-- Sign-In/Up Form -->
+    <!-- Sign-In/Up Form -->
 
     <div class="sign-in-sign-up">
-        <!-- Sign-In Form -->
-        <div class="sign-in-up-form" id="sign-in-form">
-            <h2>Sign In To Play</h2>
-            <form action="home.html" method="">
-                <div class="sign-in-up-input">
-                    <label for="sign-in-email">Email:</label><br>
-                    <input type="email" id="sign-in-email" name="email" placeholder="Email" required><br>
-            
-                    <label for="sign-in-password">Password:</label><br>
-                    <input type="password" id="sign-in-password" name="password" placeholder="Password" required><br>
-                </div>
-            
-                <div class="sign-in-up-button">
-                    <input type="submit" value="Sign In">
-                </div>
-            
-                <div class="sign-in-up-link">
-                    <a href="#" onclick="toggleForm('sign-up-form')">or create an account</a><br>
-                </div>
-            </form>
-        </div>
+      <!-- Sign-In Form -->
+      <div class="sign-in-up-form" id="sign-in-form">
+        <h2>Sign In To Play</h2>
+        <form action="home.html" method="">
+          <div class="sign-in-up-input">
+            <label for="sign-in-email">Email:</label><br />
+            <input
+              type="email"
+              id="sign-in-email"
+              name="email"
+              placeholder="Email"
+              required
+            /><br />
 
-        <!-- Sign-Up Form -->
-        <div class="sign-in-up-form" id="sign-up-form" style="display: none;">
-            <h2>Create an Account</h2>
-            <form action="home.html" method="">
+            <label for="sign-in-password">Password:</label><br />
+            <input
+              type="password"
+              id="sign-in-password"
+              name="password"
+              placeholder="Password"
+              required
+            /><br />
+          </div>
 
-                <div class="sign-in-up-input">
+          <div class="sign-in-up-button">
+            <input type="submit" value="Sign In" />
+          </div>
 
-                    <label for="sign-up-username">Username:</label><br>
-                    <input type="text" id="sign-up-username" name="username" placeholder="Username" required><br>
+          <div class="sign-in-up-link">
+            <a href="#" onclick="toggleForm('sign-up-form')"
+              >or create an account</a
+            ><br />
+          </div>
+        </form>
+      </div>
 
-                    <label for="sign-up-email">Email:</label><br>
-                    <input type="email" id="sign-up-email" name="email" placeholder="Email" required><br>
+      <!-- Sign-Up Form -->
+      <div class="sign-in-up-form" id="sign-up-form" style="display: none">
+        <h2>Create an Account</h2>
+        <form action="home.html" method="">
+          <div class="sign-in-up-input">
+            <label for="sign-up-username">Username:</label><br />
+            <input
+              type="text"
+              id="sign-up-username"
+              name="username"
+              placeholder="Username"
+              required
+            /><br />
 
-                    <label for="sign-up-password">Password:</label><br>
-                    <input type="password" id="sign-up-password" name="password" placeholder="Password" required><br>
-                </div>
+            <label for="sign-up-email">Email:</label><br />
+            <input
+              type="email"
+              id="sign-up-email"
+              name="email"
+              placeholder="Email"
+              required
+            /><br />
 
-                <div class="sign-in-up-button">
-                    <input type="submit" value="Sign Up">
-                </div>
+            <label for="sign-up-password">Password:</label><br />
+            <input
+              type="password"
+              id="sign-up-password"
+              name="password"
+              placeholder="Password"
+              required
+            /><br />
+          </div>
 
-                <div class="sign-in-up-link">
-                    <a href="#" onclick="toggleForm('sign-in-form')">or login</a>
-                </div>
-                
-            </form>
-        </div>
+          <div class="sign-in-up-button">
+            <input type="submit" value="Sign Up" />
+          </div>
+
+          <div class="sign-in-up-link">
+            <a href="#" onclick="toggleForm('sign-in-form')">or login</a>
+          </div>
+        </form>
+      </div>
     </div>
 
-
     <footer class="footer">
-        <div class="footer-content">
-            <p id ="Quote">Lost in the Pixelated Code Labyrinth</p>
-            <div class="social-icons">
-                <a href="https://github.com/ma-asad" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/maatterkhan/" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
-            </div>
-            <p id ="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
+      <div class="footer-content">
+        <p id="Quote">Lost in the Pixelated Code Labyrinth</p>
+        <div class="social-icons">
+          <a
+            href="https://github.com/ma-asad"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub Profile"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/maatterkhan/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn Profile"
+            ><i class="bi bi-linkedin"></i
+          ></a>
         </div>
+        <p id="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
-
-
-

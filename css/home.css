@@ -1,73 +1,74 @@
 .navbar {
-    margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 /* Center and style character image */
-#char-img img{
-    margin: 0 auto;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#char-img img {
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* MENU */
 .menu-section {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    font-size: 30px;
-    line-height: 2;
-    text-transform: uppercase;
+  margin: 25px 0;
+  font-size: 1.875rem;
+  line-height: 2;
+  text-transform: uppercase;
 }
 
 /* Center and style menu */
 .menu {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    margin: 0 auto;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #C6C0A1;
-    font-weight: 300;
+  text-decoration: none;
+  color: #c6c0a1;
+  font-weight: 300;
 }
-  
+
 .menu li {
-    list-style: none;
+  list-style: none;
 }
 
 /* POINTER */
 
 /* Pointer image */
 .pointer-img {
-    width: 46px;
-    height: 40px;
-    background-image: url('../assets/img/sprite_0.png');
+  width: 48px;
+  height: 48px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23D5D6A5" viewBox="0 0 24 24"> <path d="M6 2h2v2H6V2Zm4 9h4v2h-4v-2Zm4 4h-4v2h4v-2Z"/> <path d="M16 4h-2v2h-4V4H8v2H6v3H4V7H2v2h2v2h2v2H2v2h4v2H4v2H2v2h2v-2h2v3h12v-3h2v2h2v-2h-2v-2h-2v-2h4v-2h-4v-2h2V9h2V7h-2v2h-2V6h-2V4ZM8 20V8h8v12H8Zm8-16V2h2v2h-2Z"/> </svg>');
+  background-size: cover;
 }
 
 /* Style menu pointer */
 .menu-pointer {
-    position:relative;
-    display: block;
+  position: relative;
+  display: block;
 }
 
 /* Style menu pointer on hover */
 .menu-pointer:hover {
-    cursor: pointer;
-    padding: 0 10px;
+  cursor: pointer;
+  padding: 0 10px;
 
-    background-color: rgba(21, 21, 21, 0.501);
-    color: #dee154;
+  background-color: rgba(21, 21, 21, 0.501);
+  color: #dee154;
 }
 
 /* Show menu pointer icon on hover */
-.menu-pointer:hover i { 
-    display: block;
-    position: absolute;
-    left: -2em;
+.menu-pointer:hover i {
+  display: block;
+  position: absolute;
+  left: -2em;
 }

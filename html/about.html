@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixelated Me</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+  </head>
 
-</head>
-
-
-<body>
-
+  <body>
     <header>
-        <!-- NAVIGATION BAR -->
-        <nav class="navbar">
-            <div class = "logo">
-                <img id="nav-logo" src="../assets/img/PixMe.gif" alt="Logo">
-                <div class="nav-title">
-                    <div id="first">Pixelated Me</div>
-                    <div id="second">Code Labyrinth</div>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li class= "link-item"><a href="../html/home.html">HOME</a></li>
-                <li class= "link-item"><a href="../html/about.html">ABOUT</a></li>
-                <li class= "link-item"><a href="../html/login.html">LOGOUT</a></li>
-            </ul>
-        </nav>
+      <!-- NAVIGATION BAR -->
+      <nav class="navbar">
+        <div class="logo">
+          <img id="nav-logo" src="../assets/img/sprite/PixMe.gif" alt="Logo" />
+          <div class="nav-title">
+            <div id="first">Pixelated Me</div>
+            <div id="second">Code Labyrinth</div>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li class="link-item"><a href="../html/home.html">HOME</a></li>
+          <li class="link-item"><a href="../html/about.html">ABOUT</a></li>
+          <li class="link-item"><a href="../html/login.html">LOGOUT</a></li>
+        </ul>
+      </nav>
     </header>
 
+    <!-- ABOUT ME  -->
+    <section class="about-section about-me">
+      <img
+        src="../assets/img/sprite/laptop.gif"
+        alt="About the game image"
+        class="about-image"
+        id="laptop"
+      />
+      <div class="about-text">
+        <h2>About The Developer</h2>
+        <p>
+          I'm Mohammad Asad Atterkhan, currently residing in Mauritius. I'm a
+          second-year student pursuing a BSc in Computer Science & Systems
+          Engineering at Middlesex University. I've always had a keen interest
+          in technology and computer science, especially in cybersecurity.<br>
+          And,well, I also love cats! 😸
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT THE GAME  -->
+    <section class="about-section about-game">
+      <div class="about-text">
+        <h2>About Pixelated Me</h2>
+        <p>
+          "Pixelated Me: Code Labyrinth" is a 2D 2D pixel maze platformer,
+          blending problem-solving and retro gaming with a unique twist. You, as
+          a developer, navigate a pixelated character through a coding-themed
+          maze. This game brings the worlds of coding and retro gaming
+          together,creating a unique and immersive experience. This game was
+          created as part of my second-year coursework for Middlesex
+          University's CST2120 Web Application and Databases module in 2023. I
+          hope it brings you as much joy to play as it brought me tears to
+          create :').
+        </p>
+      </div>
+      <img
+        src="../assets/img/sprite/PixMe Alone.gif"
+        alt="About me image"
+        class="about-image"
+        id="PixMe-Alone"
+      />
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-content">
-            <p id ="Quote">Lost in the Pixelated Code Labyrinth</p>
-            <div class="social-icons">
-                <a href="https://github.com/ma-asad" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/maatterkhan/" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
-            </div>
-            <p id ="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
+      <div class="footer-content">
+        <p id="Quote">Lost in the Pixelated Code Labyrinth</p>
+        <div class="social-icons">
+          <a
+            href="https://github.com/ma-asad"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub Profile"
+            ><i class="bi bi-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/maatterkhan/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn Profile"
+            ><i class="bi bi-linkedin"></i
+          ></a>
         </div>
+        <p id="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

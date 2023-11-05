@@ -1,214 +1,236 @@
 @font-face {
-    font-family: 'Pixel Operator';
-    src: url('https://notabug.org/HarvettFox96/ttf-pixeloperator/src/master/ttf/PixelOperator.ttf') format('ttf', 'truetype');
-    src: url('../assets/fonts/pixel_operator/PixelOperator.ttf') format('ttf', 'truetype'); 
+  font-family: "Pixel Operator";
+  src: url("https://notabug.org/HarvettFox96/ttf-pixeloperator/src/master/ttf/PixelOperator.ttf")
+    format("ttf", "truetype");
+  src: url("../assets/fonts/pixel_operator/PixelOperator.ttf")
+    format("ttf", "truetype");
 
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Pixelify Sans';
-    src: url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap') format('ttf', 'truetype');
-    src: url('../assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('ttf', 'truetype');
+  font-family: "Pixelify Sans";
+  src: url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap")
+    format("ttf", "truetype");
+  src: url("../assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf")
+    format("ttf", "truetype");
 
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Press Start 2P';
-    src: url('https://fonts.googleapis.com/css?family=Press%20Start%202P') format('ttf', 'truetype');
-    src: url('../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('ttf', 'truetype');
+  font-family: "Press Start 2P";
+  src: url("https://fonts.googleapis.com/css?family=Press%20Start%202P")
+    format("ttf", "truetype");
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+    format("ttf", "truetype");
 
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    scrollbar-color: transparent transparent;
-    scrollbar-width: none;
-
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
 }
 
-html{
-    height: 100vh;
-    width: 100vw;
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 
-
-    font-family: 'Press Start 2P';
-    &::-webkit-scrollbar {
-        display: none;
-        }
+  font-family: "Press Start 2P";
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Background Animation */
 body {
-    background: linear-gradient(
-        80deg, 
-        hsl(30, 4%, 11%),
-        hsl(26, 5%, 11%),
-        hsl(27, 5%, 11%),
-        rgb(32, 30, 29),
-        hsl(30, 6%, 12%),
-        hsl(32, 6%, 12%),
-        hsl(34, 7%, 12%),
-        hsl(35, 7%, 12%),
-        hsl(37, 8%, 12%),
-        hsl(40, 8%, 12%),
-        hsl(42, 8%, 12%),
-        hsl(44, 9%, 12%),
-        hsl(45, 9%, 12%),
-        hsl(47, 10%, 12%),
-        hsl(50, 10%, 12%),
-        hsl(51, 11%, 12%),
-        hsl(52, 12%, 12%),
-        hsl(52, 13%, 12%),
-        hsl(52, 13%, 12%),
-        hsl(51, 11%, 12%)
-        );
-    
-    background-size: 1000% 1000%;
-    -webkit-animation: BackgroundAnimation 10s ease-in-out infinite;
-    -moz-animation: BackgroundAnimation 10s ease-in-out infinite;
-    animation: BackgroundAnimation 10s ease-in-out infinite;
-}
+  background: linear-gradient(
+    80deg,
+    hsl(30, 4%, 11%),
+    hsl(26, 5%, 11%),
+    hsl(27, 5%, 11%),
+    rgb(32, 30, 29),
+    hsl(30, 6%, 12%),
+    hsl(32, 6%, 12%),
+    hsl(34, 7%, 12%),
+    hsl(35, 7%, 12%),
+    hsl(37, 8%, 12%),
+    hsl(40, 8%, 12%),
+    hsl(42, 8%, 12%),
+    hsl(44, 9%, 12%),
+    hsl(45, 9%, 12%),
+    hsl(47, 10%, 12%),
+    hsl(50, 10%, 12%),
+    hsl(51, 11%, 12%),
+    hsl(52, 12%, 12%),
+    hsl(52, 13%, 12%),
+    hsl(52, 13%, 12%),
+    hsl(51, 11%, 12%)
+  );
 
+  background-size: 1000% 1000%;
+  -webkit-animation: BackgroundAnimation 10s ease-in-out infinite;
+  -moz-animation: BackgroundAnimation 10s ease-in-out infinite;
+  animation: BackgroundAnimation 10s ease-in-out infinite;
+}
 
 @-webkit-keyframes BackgroundAnimation {
-    0%{background-position:0% 73%}
-    50%{background-position:100% 28%}
-    100%{background-position:0% 73%}
+  0% {
+    background-position: 0% 73%;
+  }
+  50% {
+    background-position: 100% 28%;
+  }
+  100% {
+    background-position: 0% 73%;
+  }
 }
 @-moz-keyframes BackgroundAnimation {
-    0%{background-position:0% 73%}
-    25%{background-position:50% 50%}
-    50%{background-position:100% 28%}
-    75%{background-position:50% 50%}
-    100%{background-position:0% 73%}
+  0% {
+    background-position: 0% 73%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 28%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 73%;
+  }
 }
 @keyframes BackgroundAnimation {
-    0%{background-position:0% 73%}
-    25%{background-position:50% 50%}
-    50%{background-position:100% 28%}
-    75%{background-position:50% 50%}
-    100%{background-position:0% 73%}
+  0% {
+    background-position: 0% 73%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 28%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 73%;
+  }
 }
 
 /* NAVIGATION BAR */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    padding: 10px 0;
-    min-width: 100vw;
-    height: 50px;
+  min-width: 100vw;
+  height: 70px;
 
-    font-family: 'Pixel Operator';
-    background-color: #1a1a1a67;
+  font-family: "Pixel Operator";
+  background-color: #1a1a1a67;
 }
 
 .logo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
 }
 
 .logo img {
-    width: 64px;
-    height: 64px;
+  width: 64px;
+  height: 64px;
 }
 
 .nav-title {
-    display: flex;
-    flex-direction: column;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  color: white;
 }
 
 #first {
-    font-size: 30px;
-    font-weight: 500;
-    color: rgb(225, 228, 96);
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: rgb(225, 228, 96);
 }
 
 #second {
-    font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
 }
 
 .link-item a {
-    font-size: 25px;
-    font-weight: 500;
-    margin-right: 20px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
+  align-content: center;
+  font-size: 1.563rem;
+  font-weight: 500;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
 }
 
 .link-item a:hover {
-    text-decoration: none;
-    text-decoration: underline;
-    font-weight: 700;
-    padding: 10px;
-    color: #D5D6A5; 
+  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 700;
+  color: #d5d6a5;
 }
-
-
-
 
 /* FOOTER */
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 100%;
-    margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  margin-top: auto;
 
-    font-family: 'Pixel Operator';
-    background-color: #1a1a1a67;
-    color: white;
+  font-family: "Pixel Operator";
+  background-color: #1a1a1a67;
+  color: white;
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-p#Quote{
-    font-size: 18px;
-    margin: 10px 0 10px;
-    color: #cfcfcf;
+p#Quote {
+  font-size: 1.125rem;
+  margin: 10px 0 10px;
+  color: #cfcfcf;
 }
 
-.social-icons a i{
-    color: rgb(209, 209, 209);
-    font-size: 15px;
-    margin: 4px;
+.social-icons a i {
+  color: rgb(209, 209, 209);
+  font-size: 0.9375rem;
+  margin: 4px;
 }
 
-p#copyright{
-    font-size: 10px;
-    color: #a1a1a1;
-
+p#copyright {
+  font-size: 0.625rem;
+  color: #a1a1a1;
 }
-
