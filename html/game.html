@@ -8,12 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/game.css" />
     <link rel="stylesheet" href="../css/popup.css" />
     <link rel="stylesheet" href="../css/setting.css" />
     <link rel="stylesheet" href="../css/info.css" />
-    <script src="../javascript/setting.js"></script>
   </head>
 
   <body>
@@ -30,7 +29,7 @@
         <ul class="nav-links">
           <li class="link-item"><a href="../html/home.html">HOME</a></li>
           <li class="link-item"><a href="../html/about.html">ABOUT</a></li>
-          <li class="link-item"><a href="../html/login.html">LOGOUT</a></li>
+          <li class="link-item"><a href="../index.html">LOGOUT</a></li>
         </ul>
       </nav>
     </header>
@@ -88,6 +87,7 @@
     <div class="setting">
       <div class="popup" id="setting">
         <div class="popup-inner">
+          <h3 class="inner-title">SETTING</h3>
           <div class="setting-close">
             <a href="#" class="x-close" role="button" aria-label="Close">
               <svg
@@ -105,7 +105,6 @@
                 />
               </svg>
             </a>
-            <h3 class="inner-title">SETTING</h3>
           </div>
 
           <!--Audio Slider-->
@@ -139,45 +138,43 @@
       </div>
     </div>
 
-    <main class="game-area">
-      <div>
-        <div class="game-controls">
-          <div class="control-icons">
-            <a href="#info" role="button" aria-label="Open info popup">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-question"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 4.081a.51.423 0 0 0 .52.44h1.778c.297 0 .535-.2.573-.445.194-1.171 1.164-2.025 2.893-2.025 1.478 0 2.832.613 2.832 2.085 0 1.134-.806 1.655-2.08 2.448-1.45.873-2.6 1.892-2.517 3.547l.006.387a.539.446 0 0 0 .539.44h1.748a.539.446 0 0 0 .539-.447v-.187c0-1.282.588-1.655 2.176-2.653 1.313-.827 2.682-1.744 2.682-3.67C11.689 1.303 8.939 0 5.928 0 3.197 0 .205 1.053 0 4.081Zm3.356 10.288c0 .952.916 1.655 2.177 1.655 1.313 0 2.216-.703 2.216-1.655 0-.985-.905-1.678-2.218-1.678-1.259 0-2.175.693-2.175 1.678z"
-                />
-              </svg>
-            </a>
-            <a href="#setting" role="button" aria-label="Open settings">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-gear-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
-                />
-              </svg>
-            </a>
-          </div>
-
-          <a href="leaderboard.html" target="_blank">Leaderboard</a>
+    <div class="game-area">
+      <div class="game-controls">
+        <div class="control-icons">
+          <a href="#info" role="button" aria-label="Open info popup">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-question"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 4.081a.51.423 0 0 0 .52.44h1.778c.297 0 .535-.2.573-.445.194-1.171 1.164-2.025 2.893-2.025 1.478 0 2.832.613 2.832 2.085 0 1.134-.806 1.655-2.08 2.448-1.45.873-2.6 1.892-2.517 3.547l.006.387a.539.446 0 0 0 .539.44h1.748a.539.446 0 0 0 .539-.447v-.187c0-1.282.588-1.655 2.176-2.653 1.313-.827 2.682-1.744 2.682-3.67C11.689 1.303 8.939 0 5.928 0 3.197 0 .205 1.053 0 4.081Zm3.356 10.288c0 .952.916 1.655 2.177 1.655 1.313 0 2.216-.703 2.216-1.655 0-.985-.905-1.678-2.218-1.678-1.259 0-2.175.693-2.175 1.678z"
+              />
+            </svg>
+          </a>
+          <a href="#setting" role="button" aria-label="Open settings">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-gear-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+              />
+            </svg>
+          </a>
         </div>
-        <canvas id="game-canvas" width="800" height="600"></canvas>
+
+        <a href="leaderboard.html" target="_blank">Leaderboard</a>
       </div>
-    </main>
+      <canvas id="game-canvas"></canvas>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -202,5 +199,6 @@
         <p id="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
       </div>
     </footer>
+    <script src="../javascript/setting.js"></script>
   </body>
 </html>

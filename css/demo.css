@@ -4,19 +4,6 @@
   text-align: center;
 }
 
-.demo-close {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.demo-close::before {
-  content: "";
-  width: 30px;
-}
-
 #video {
   height: 200px;
   width: 300px;

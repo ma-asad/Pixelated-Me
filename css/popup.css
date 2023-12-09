@@ -29,19 +29,26 @@
   color: #2d2a2a;
   background-color: #8a8787;
   font-size: 20px;
-  line-height: 2;
+  line-height: 1.5;
   margin: 16px 16px;
 }
 
 .close {
-  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.close:hover {
-  color: yellow;
+.close::before {
+  content: "";
+  width: 30px;
 }
+
 
 .x-close {
+  color: aliceblue;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -49,6 +56,10 @@
   margin: 0;
   padding: 0;
   order: 2;
+}
+
+.x-close:hover {
+  color: yellow;
 }
 
 .popup:target {
@@ -65,5 +76,3 @@
   color: #fff;
   font-weight: 300;
 }
-
-

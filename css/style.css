@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Pixel Operator";
   src: url("https://notabug.org/HarvettFox96/ttf-pixeloperator/src/master/ttf/PixelOperator.ttf")
@@ -11,10 +12,10 @@
 
 @font-face {
   font-family: "Pixelify Sans";
-  src: url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap")
-    format("ttf", "truetype");
   src: url("../assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf")
-    format("ttf", "truetype");
+  format("ttf", "truetype");
+  /* src: url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap")
+    format("ttf", "truetype"); */
 
   font-weight: normal;
   font-style: normal;

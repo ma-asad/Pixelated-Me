@@ -8,12 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/home.css" />
-    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/popup.css" />
     <link rel="stylesheet" href="../css/demo.css" />
     <link rel="stylesheet" href="../css/setting.css" />
-    <script src="../javascript/setting.js"></script>
   </head>
 
   <body>
@@ -33,12 +32,12 @@
       </nav>
     </header>
 
-    <!--POPUP DEMO-->
+    <!--popup demo-->
     <div class="demo">
       <div class="popup" id="demo">
         <div class="popup-inner">
           <div class="demo-close">
-            <a href="#" class="x-close">
+            <a href="#" class="x-close" role="button" aria-label="Close">
               <svg
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,21 +53,30 @@
                 />
               </svg>
             </a>
-            <h3 class="inner-title">DEMO</h3>
+            <h3 class="inner-title">About Pixelated Me</h3>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sequi
-            accusantium delectus error laboriosam placeat, est expedita
-            provident sed non harum facilis molestiae assumenda quibusdam
-            aspernatur soluta vero eveniet beatae.
+            <b>Welcome to Pixelated Me: Code Labyrinth,</b><br />
+            <b>A game crafted by Mohammad Asad Atterkhan.</b><br />
+            Embark on a pixelated adventure that combines excitement and
+            challenges in a unique way. Explore a maze of code and pixel art as
+            you navigate through the labyrinth. Test your problem-solving skills
+            while immersing yourself in the captivating pixelated world.<br />
+            Are you ready to experience it for yourself?<br />
+            Sign up to play or click the video below to watch a small demo of
+            the game.
           </p>
+
           <h3 class="inner-title">Demo Video</h3>
           <iframe
             src="https://www.youtube.com/embed/HWQqabCkAjU?loop=1&playlist=HWQqabCkAjU"
-            allow="fullscreen"
+            frameborder="0"
+            allowfullscreen
             title="YouTube video"
             id="video"
+            width="560"
+            height="315"
           ></iframe>
         </div>
       </div>
@@ -84,15 +92,17 @@
       <div class="popup" id="setting">
         <div class="popup-inner">
           <div class="setting-close">
-            <a href="#" class="x-close"><i class="bi bi-x"></i></a>
+            <a href="#" class="x-close"><i class="x-close"></i></a>
             <h3 class="inner-title">SETTING</h3>
           </div>
 
           <!--Audio Slider-->
           <div class="slider">
             <div>
-              AUDIO
+              <label for="volume">AUDIO</label>
               <input
+                id="volume"
+                name="volume"
                 class="vol"
                 type="range"
                 value="0"
@@ -140,7 +150,7 @@
           >
         </li>
         <li>
-          <a href="../html/login.html" class="menu-pointer"
+          <a href="../index.html" class="menu-pointer"
             ><i class="pointer-img"></i>Logout</a
           >
         </li>
@@ -170,5 +180,6 @@
         <p id="copyright">&copy; 2023 Mohammad Asad Atterkhan</p>
       </div>
     </footer>
+    <script src="../javascript/setting.js"></script>
   </body>
 </html>
