@@ -14,6 +14,7 @@ function calculateAge(dobInput, dobFeedback) {
 
 function validateDOB(dobInput, dobFeedback) {
   age = calculateAge(dobInput, dobFeedback);
+
   // Check if age is less than 11
   if (age <= 10) {
     const errorMessage = document.createElement("p");
@@ -122,11 +123,10 @@ function validatePasswordMatch(
   passwordMatchFeedback.textContent = passwordsMatch
     ? ""
     : "Passwords do not match";
-  return passwordsMatch; // Return the result
+  return passwordsMatch;
 }
 
 // Event listener for when the DOM is loaded
-
 document.addEventListener("DOMContentLoaded", function () {
   // Get the form element
   const form = document.getElementById("signup-form");
@@ -166,10 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
-  form.addEventListener("submit", function (event) {
-    submitSignUpForm(event);
-    event.preventDefault();
-  });
 });
 
 // Function to save form data
@@ -207,9 +203,6 @@ function saveFormData(event) {
 
   // Log to check if data is stored
   console.log("Stored Users:", JSON.parse(localStorage.getItem("users")));
-
-  // // Redirecting user to the home page
-  // window.location.href = "../html/home.html";
 }
 
 // Function to submit the sign-up form
@@ -226,14 +219,25 @@ function submitSignUpForm(event) {
   const emailFeedback = document.getElementById("sign-up-email-feedback");
   const passwordInput = form.elements["sign-up-password"].value;
   const confirmPasswordInput = form.elements["confirm-password"].value;
-  const passwordMatchFeedback = document.getElementById("password-match-feedback");
-  const passwordStrengthFeedback = document.getElementById("password-strength-feedback");
+  const passwordMatchFeedback = document.getElementById(
+    "password-match-feedback"
+  );
+  const passwordStrengthFeedback = document.getElementById(
+    "password-strength-feedback"
+  );
 
   // Call validation functions and store results
   const isEmailValid = validateEmail(emailInput, emailFeedback);
   const isDobValid = validateDOB(dobInput, dobFeedback);
-  const isPasswordStrong = validatePasswordStrength(passwordInput, passwordStrengthFeedback);
-  const isPasswordMatch = validatePasswordMatch(passwordInput, confirmPasswordInput, passwordMatchFeedback);
+  const isPasswordStrong = validatePasswordStrength(
+    passwordInput,
+    passwordStrengthFeedback
+  );
+  const isPasswordMatch = validatePasswordMatch(
+    passwordInput,
+    confirmPasswordInput,
+    passwordMatchFeedback
+  );
 
   // Check if form is valid
   if (isEmailValid && isDobValid && isPasswordStrong && isPasswordMatch) {

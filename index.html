@@ -101,8 +101,7 @@
       <div class="form-container" id="sign-in-form">
         <h2>Sign In To Play</h2>
         <form
-          action="html/home.html"
-          onsubmit="submitSignUpForm(event);"
+          onsubmit="submitSignInForm(event);"
         >
           <div class="form-input">
             <label for="sign-in-email">Email:</label><br />
@@ -112,7 +111,6 @@
               name="email"
               placeholder="Email"
               required
-              onkeyup="validateEmail('sign-in-email')"
             /><br />
 
             <label for="sign-in-password">Password:</label><br />
