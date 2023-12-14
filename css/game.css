@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin: 50px 0 40px;
+  margin: 50px 0px 0px 0px;
 }
 
 .game-controls {
@@ -14,9 +13,6 @@
   margin-bottom: 0px;
 }
 
-.game-controls i {
-  cursor: pointer;
-}
 
 .game-controls a {
   margin-right: 20px;
@@ -30,19 +26,29 @@
   color: #d5d6a5;
 }
 
-.control-icons {
-  margin-left: 10px;
+
+
+#info-icon svg{
+  margin-left: 20px;
   margin-bottom: 10px;
   color: white;
 }
 
-.control-icons svg:hover {
-  cursor: pointer;
+#info-icon svg:hover {
   color: #d5d6a5;
 }
 
-#game-canvas {
-  background-color: #1a1a17;
-  width: 100vw;
-  height: 70vh;
+
+.timer-container p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.timer-container span{
+  color: #d5d6a5;
 }
