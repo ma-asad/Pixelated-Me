@@ -182,6 +182,8 @@ function saveFormData(event) {
   const username = form.elements["username"].value;
   const email = form.elements["sign-up-email"].value;
   const password = form.elements["sign-up-password"].value;
+  let rank = 0;
+  let timeTaken = 1000;
 
   // Create user data object
   const newUser = {
@@ -192,6 +194,8 @@ function saveFormData(event) {
     username,
     email,
     password,
+    rank,
+    timeTaken
   };
 
   // Retrieving existing users or initializing an empty array

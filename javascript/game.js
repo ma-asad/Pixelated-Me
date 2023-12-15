@@ -41,7 +41,8 @@ class Boundary {
   static width = 32; // Width of the boundary
   static height = 32; // Height of the boundary
 
-  constructor({ position }) {
+  constructor({ position, symbol }) {
+    this.symbol = symbol;
     this.position = position; // Position of the boundary
     this.width = 32; // Width of the boundary
     this.height = 32; // Height of the boundary
@@ -49,7 +50,7 @@ class Boundary {
 
   // Draw the boundary on the canvas
   draw(c) {
-    c.fillStyle = "rgba(255, 0, 0, 1)";
+    c.fillStyle = "rgba(255, 0, 0, 0)";
     c.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 }
@@ -73,7 +74,6 @@ class Game {
       y: -820,
     };
     this.boundaries = this.createBoundaries(); // Array of boundary objects
-
     this.background = this.createBackground(); // Background sprite
     this.player = this.createPlayer(); // Player sprite
     this.keys = {
@@ -121,6 +121,46 @@ class Game {
     );
   }
 
+  endGame() {
+    // Stop the timer
+    clearInterval(this.timerId);
+
+    // Calculate time taken
+    let timeTaken = this.time;
+
+    // Get the canvas element
+    let canvas = document.getElementById("game-canvas");
+    // Create a black screen
+    let blackScreen = document.createElement("div");
+    blackScreen.id = "blackScreen";
+    blackScreen.style.position = "absolute";
+    blackScreen.style.top = canvas.offsetTop + "px";
+    blackScreen.style.left = canvas.offsetLeft + "px";
+    blackScreen.style.width = canvas.offsetWidth + "px";
+    blackScreen.style.height = canvas.offsetHeight + "px";
+
+    blackScreen.style.backgroundColor = "black";
+    blackScreen.style.color = "white";
+    blackScreen.style.display = "flex";
+    blackScreen.style.justifyContent = "center";
+    blackScreen.style.alignItems = "center";
+    blackScreen.innerText = `You have escaped the labyrinth!. \n \n Time taken: ${timeTaken} seconds. \n \n CTRL+R to restart.`;
+
+    // Append black screen to body
+    document.body.appendChild(blackScreen);
+
+    // Retrieve the current user from session storage
+    let currentUser = JSON.parse(sessionStorage.getItem("user"));
+
+    // Update the user's time
+    currentUser.timeTaken = this.time;
+
+    // Save the user back to session storage
+    sessionStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+    // Update the leaderboard
+    updateLeaderboard(currentUser);
+  }
 
   // Create the collisions map from the collisions array
   createCollisionsMap(collisions) {
@@ -137,15 +177,17 @@ class Game {
 
     this.collisionsMap.forEach((row, i) => {
       row.forEach((symbol, j) => {
-        if (symbol === 3759)
+        if (symbol === 3759 || symbol === 3760) {
           boundaries.push(
             new Boundary({
               position: {
                 x: j * Boundary.width + this.offset.x,
                 y: i * Boundary.height + this.offset.y,
               },
+              symbol: symbol,
             })
           );
+        }
       });
     });
     return boundaries;
@@ -270,7 +312,7 @@ class Game {
       });
       this.player.draw(this.c);
       let moving = true;
-
+      let isEnd = false;
       // Movement, Map Boundary, and Collision
       if (this.keys.w.pressed && this.lastKey === "w") {
         // Check for collisions first
@@ -285,13 +327,15 @@ class Game {
                   x: boundary.position.x,
                   y: boundary.position.y + 1,
                 },
+                symbol: boundary.symbol,
               },
             })
           ) {
-            console.log("collision w");
-
             moving = false;
-            break;
+            if (boundary.symbol === 3760) {
+              moving = true;
+              break;
+            }
           }
         }
 
@@ -302,7 +346,7 @@ class Game {
             });
           }
 
-          if (moving && this.background.position.y > -19) {
+          if (this.background.position.y > -19) {
             this.player.position.y -= 1;
           }
         }
@@ -321,10 +365,11 @@ class Game {
               },
             })
           ) {
-            console.log("collision a");
-
             moving = false;
-            break;
+            if (boundary.symbol === 3760) {
+              moving = true;
+              break;
+            }
           }
         }
 
@@ -350,10 +395,11 @@ class Game {
               },
             })
           ) {
-            console.log("collision s");
-
             moving = false;
-            break;
+            if (boundary.symbol === 3760) {
+              moving = true;
+              break;
+            }
           }
         }
 
@@ -365,6 +411,7 @@ class Game {
       } else if (this.keys.d.pressed && this.lastKey === "d") {
         for (let i = 0; i < this.boundaries.length; i++) {
           const boundary = this.boundaries[i];
+
           if (
             this.boundaryCollision({
               rectangle1: this.player,
@@ -374,13 +421,18 @@ class Game {
                   x: boundary.position.x - 1,
                   y: boundary.position.y,
                 },
+                symbol: boundary.symbol,
               },
             })
           ) {
-            console.log("collision d");
-
             moving = false;
-            break;
+            // break;
+            if (boundary.symbol === 3760) {
+              console.log("collision exit a");
+              moving = true;
+              isEnd = true;
+              break;
+            }
           }
         }
 
@@ -392,6 +444,9 @@ class Game {
           }
           if (this.background.position.x < -this.canvas.width + 1) {
             this.player.position.x += 1;
+          }
+          if (isEnd) {
+            this.endGame();
           }
         }
       }
@@ -428,9 +483,9 @@ class GameLoader {
     this.startButton.addEventListener("click", () => {
       // If a game is already running, end it
       if (this.game) {
-        this.game.endGame(); // You'll need to implement this method in the Game class
+        this.game.endGame();
       }
-  
+
       // Start a new game
       this.game = new Game(this.canvas, collisions);
       this.c.clearRect(0, 0, this.canvas.width, this.canvas.height);
