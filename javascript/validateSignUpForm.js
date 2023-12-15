@@ -242,7 +242,7 @@ function submitSignUpForm(event) {
   // Check if form is valid
   if (isEmailValid && isDobValid && isPasswordStrong && isPasswordMatch) {
     saveFormData(event); // Only call saveFormData if valid
-    window.location.href = "../html/home.html";
+    window.location.href = "../index.html";
   } else {
     alert("Invalid Details");
     console.log("Invalid Details");

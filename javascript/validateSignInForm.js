@@ -14,7 +14,8 @@ function submitSignInForm(event) {
     // Check if there's a user with the same email and password
     const user = users.find(user => user.email === email && user.password === password);
     if (user) {
-      // If there is, redirect to home.html
+      // If there is, save to session and redirect to home.html
+      sessionStorage.setItem('user', JSON.stringify(user));
       window.location.href = '../html/home.html';
     } else {
       // If there isn't, display an alert
@@ -22,4 +23,6 @@ function submitSignInForm(event) {
     }
   } 
 }
+
+
   
